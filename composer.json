@@ -1,0 +1,7 @@
+{
+    "require": {
+        "txj123/zilf" : "*",
+		"monolog/monolog": "^1.21",
+		"psr/cache": "^1.0"
+    }
+}

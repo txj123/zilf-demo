@@ -1,0 +1,38 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: lilei
+ * Date: 16-8-30
+ * Time: 下午4:21
+ */
+
+//需要加载的包
+$bundles = require(__DIR__ . '/bundles.php');
+
+//数据库配置文件
+$databases = require(__DIR__ . '/databases.php');
+
+return array(
+    'timezone' => 'UTC',   //时区
+    'language' => 'en',    //语言配置
+
+    'framework' => [
+        'bundle' => 'app',
+        'controller' => 'Index',
+        'action' => 'index',
+        'controller_suffix' => 'Controller', //控制器后缀
+        'action_suffix' => '',   //action方法后缀
+        'view_suffix' => '.php',  //视图的后缀
+    ],
+    'runtime' => APP_PATH . '/runtime',
+    'monolog' => [
+        'handlers' => [
+            [
+                'type' => 'StreamHandler',
+                'level' => 'debug',
+            ]
+        ]
+    ],
+    'bundles' => $bundles,
+    'db' => $databases,
+);
