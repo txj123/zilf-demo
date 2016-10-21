@@ -33,11 +33,6 @@ class IndexController extends Controller
         $this->render('index');
     }
 
-    
-    function show(){
-        echo 'rrr';
-    }
-
     /**
      *
      */
