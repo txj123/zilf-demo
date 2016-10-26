@@ -6,10 +6,10 @@
  * Time: 下午4:21
  */
 
-//需要加载的包
+//加载需要加载的包
 $bundles = require(__DIR__ . '/bundles.php');
 
-//数据库配置文件
+//加载数据库配置文件
 $databases = require(__DIR__ . '/databases.php');
 
 return array(
