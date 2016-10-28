@@ -1,19 +1,6 @@
 <?php
 define('START_TIME',microtime());
 
-//当前根目录
-defined('ZILF_DEBUG') or define('ZILF_DEBUG', true);
-
-
-/**
- *  development
- *  testing
- *  production
- */
-defined('ZILF_ENV') or define('ZILF_ENV', 'dev');
-
-define('CI_DEBUG',true);
-
 /**
  * 必须设置的目录路径
  */
@@ -31,5 +18,12 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 \Zilf\Debug\Debug::enable();
 
+/**
+ * 配置文件路径
+ */
+$config = APP_PATH.'/config/config.php';
 
-(new \Zilf\System\Application())->run();
+/**
+ * 运行程序入口
+ */
+(new \Zilf\System\Application($config))->run();

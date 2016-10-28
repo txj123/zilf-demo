@@ -10,10 +10,6 @@
  * @var \Zilf\Routing\Route $route;
  */
 
-$route->get('/test(/:id)', ['App\Controllers\Index', 'test'],
-    [
-        'require' => [':id' => '\d+',],
-        'default' => [':id' => '1',]
-    ]
-);
+$route->any('/test(/:id)', ['App\Controllers\IndexController', 'test']);
+
 
