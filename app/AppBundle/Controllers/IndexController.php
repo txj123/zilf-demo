@@ -33,8 +33,8 @@ class IndexController extends Controller
         $this->render('index');
     }
 
-    function test(){
-        echo 'test';
+    function test($id=''){
+        echo 'test === '.$id;
     }
 
     /**
