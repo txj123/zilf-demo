@@ -13,6 +13,7 @@ $bundles = require(__DIR__ . '/bundles.php');
 $databases = require(__DIR__ . '/databases.php');
 
 return array(
+    'environment' => 'dev',  //pro 生产环境  dev 开发环境 test 测试环境
     'timezone' => 'UTC',   //时区
     'language' => 'en',    //语言配置
 
