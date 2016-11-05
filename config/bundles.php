@@ -7,5 +7,5 @@
  */
 
 return array(
-    'app' => APP_PATH . '/app/AppBundle',
+    'app' => APP_PATH . '/app/Http',
 );

@@ -2,18 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Test;
-use App\Models\ZnCaijiRule;
-use Monolog\Handler\StreamHandler;
-use Monolog\Logger;
-use Zilf\Curl\Curl;
-use Zilf\Curl\CurlException;
-use Zilf\Db\Connection;
-use Zilf\Db\Query;
-use Zilf\HttpFoundation\Request;
-use Zilf\Log\Writer;
 use Zilf\System\Controller;
-use Zilf\System\Zilf;
 
 /**
  * Created by PhpStorm.
