@@ -11,8 +11,6 @@
     "require": {
 		"php": ">=5.3.0",
 		"zilf/zilf" : "v1.0.6-alpha",
-		"zilf/polyfill-mbstring": "^1.0",
-		"zilf/var-dumper": "^2.6",
-		"monolog/monolog": "^1.21"
+		"zilf/var-dumper": "^2.6"
 	}
 }
