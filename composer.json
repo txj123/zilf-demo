@@ -11,7 +11,7 @@
     "require": {
 		"php": ">=5.5.9",
 		"zilf/debugbar": "1.15.*",
-		"zilf/zilf" : "v1.2.1-alpha",
+		"zilf/zilf" : "v1.2.2-alpha",
 		"predis/predis": "^1.1",
 		"overtrue/pinyin": "~3.0",
 		"jasongrimes/paginator": "~1.0"
