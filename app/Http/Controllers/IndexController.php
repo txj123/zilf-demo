@@ -25,7 +25,7 @@ class IndexController extends HttpBaseController
      * 首页
      */
     function index(){
-        return $this->render('index','',$response);
+        return $this->render('index');
     }
 
 
