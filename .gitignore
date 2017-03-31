@@ -1,5 +1,6 @@
 # 此为注释 – 将被 Git 忽略
 # 忽略文件
 
-web_zhongyi.txt
-DoWork.txt
+.idea/*
+runtime/*
+.sass-cache/*

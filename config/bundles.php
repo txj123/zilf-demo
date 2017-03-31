@@ -1,11 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lilei
- * Date: 16-8-30
- * Time: 下午4:15
- */
 
+/**
+ * 为了能够通过url自动执行其他包的控制器，请设置其他包的名字，如app/Http包的名称为http
+ */
 return array(
-    'app' => APP_PATH . '/app/Http',
+    'http'=>[
+        'alias' => 'http',  //别名
+    ],
+    'sysadmin'=>[],
+    'caiji'=>[],
 );

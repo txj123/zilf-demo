@@ -1,8 +1,15 @@
 <?php
 
-namespace App\Controllers;
+namespace Http\Controllers;
 
-use Zilf\System\Controller;
+use App\Models\Category;
+use DebugBar\DebugBar;
+use DebugBar\StandardDebugBar;
+use Zilf\Db\Connection;
+use Zilf\HttpFoundation\Cookie;
+use Zilf\HttpFoundation\Response;
+use Zilf\Support\DB;
+use Zilf\System\Zilf;
 
 /**
  * Created by PhpStorm.
@@ -10,7 +17,7 @@ use Zilf\System\Controller;
  * Date: 16-8-28
  * Time: 下午3:13
  */
-class IndexController extends Controller
+class IndexController extends HttpBaseController
 {
     public $name;
 
@@ -18,13 +25,9 @@ class IndexController extends Controller
      * 首页
      */
     function index(){
-        $this->memory();
-        $this->render('index');
+        return $this->render('index','',$response);
     }
 
-    function test($id=''){
-        echo 'test === '.$id;
-    }
 
     /**
      *
