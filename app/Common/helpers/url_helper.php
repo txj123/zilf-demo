@@ -21,7 +21,7 @@ function toRoute($url = '', $params = '',$scheme = true){
     }
 
     if($scheme){
-        $host = \Zilf\Support\Request::getInstance()->getSchemeAndHttpHost();
+        $host = \Zilf\Facades\Request::getInstance()->getSchemeAndHttpHost();
     }else{
         $host = '';
     }
@@ -38,5 +38,22 @@ function toRoute($url = '', $params = '',$scheme = true){
         $str_param = '/'.(string)$params;
     }
 
-    echo $url.$str_param;
+    return $url.$str_param;
+}
+
+/**
+ * 获取url的参数
+ *
+ * @param int $n
+ * @return array|string
+ */
+function getSegment(int $n = 0)
+{
+    $n = (int)$n;
+    $segments = \Zilf\System\Zilf::$app->params;
+    if ($n >= 0) {
+        return isset($segments[$n]) ? $segments[$n] : '';
+    } else {
+        return $segments;
+    }
 }
