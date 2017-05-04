@@ -7,7 +7,7 @@
  * @return $this
  */
 function config_helper($name){
-    return \Zilf\System\Zilf::$container->get('config')->get($name);
+    return \Zilf\System\Zilf::$container->getShare('config')->get($name);
 }
 
 
@@ -256,3 +256,95 @@ function curlPost($url, $data = array(), $type = 'array', $json = false)
     }
 }
 
+
+if (! function_exists('str_limit')) {
+    /**
+     * Limit the number of characters in a string.
+     *
+     * @param  string  $value
+     * @param  int     $limit
+     * @param  string  $end
+     * @return string
+     */
+    function str_limit($value, $limit = 100, $end = '...')
+    {
+        if (mb_strwidth($value, 'UTF-8') <= $limit) {
+            return $value;
+        }
+
+        return rtrim(mb_strimwidth($value, 0, $limit, '', 'UTF-8')).$end;
+    }
+}
+
+
+if (! function_exists('tap')) {
+    /**
+     * Call the given Closure with the given value then return the value.
+     *
+     * @param  mixed  $value
+     * @param  callable  $callback
+     * @return mixed
+     */
+    function tap($value, $callback)
+    {
+        $callback($value);
+
+        return $value;
+    }
+}
+
+
+if (! function_exists('value')) {
+    /**
+     * Return the default value of the given value.
+     *
+     * @param  mixed  $value
+     * @return mixed
+     */
+    function value($value)
+    {
+        return $value instanceof Closure ? $value() : $value;
+    }
+}
+
+if (! function_exists('windows_os')) {
+    /**
+     * Determine whether the current environment is Windows based.
+     *
+     * @return bool
+     */
+    function windows_os()
+    {
+        return strtolower(substr(PHP_OS, 0, 3)) === 'win';
+    }
+}
+
+
+if (! function_exists('array_get')) {
+    /**
+     * Get an item from an array using "dot" notation.
+     *
+     * @param  \ArrayAccess|array  $array
+     * @param  string  $key
+     * @param  mixed   $default
+     * @return mixed
+     */
+    function array_get($array, $key, $default = null)
+    {
+        return \Zilf\Support\Arr::get($array, $key, $default);
+    }
+}
+
+if (! function_exists('array_has')) {
+    /**
+     * Check if an item or items exist in an array using "dot" notation.
+     *
+     * @param  \ArrayAccess|array  $array
+     * @param  string|array  $keys
+     * @return bool
+     */
+    function array_has($array, $keys)
+    {
+        return \Zilf\Support\Arr::has($array, $keys);
+    }
+}

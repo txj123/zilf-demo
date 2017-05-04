@@ -3,22 +3,24 @@
 //加载函数文件
 include_once APP_PATH.'/app/Common/helpers/url_helper.php';
 include_once APP_PATH.'/app/Common/helpers/cookie_helper.php';
+include_once APP_PATH.'/app/Common/helpers/security_helper.php';
 include_once APP_PATH.'/app/Common/helpers/functions.php';
 
 return array(
-    'environment' => 'dev',  //pro 生产环境  dev 开发环境 test 测试环境
-    'timezone' => 'UTC',   //时区
-    'language' => 'en',    //语言配置
+    'timezone' => 'Asia/Shanghai',   //时区
+    'language' => 'zh-CN',    //语言配置
 
     'framework' => [
-        'bundle' => 'Http',
-        'controller' => 'Index',
+        'bundle' => 'http',
+        'controller' => 'index',
         'action' => 'index',
 
         'controller_suffix' => 'Controller', //控制器后缀
         'action_suffix' => '',   //action方法后缀
         'view_suffix' => '.php',  //视图的后缀
     ],
+
+    'app_key' => 'HMC6Y5x0oECryN32',  //app_key 必须是16位的字符串
 
     'runtime' => APP_PATH . '/runtime',  //系统缓存文件路径
     'monolog' => [
@@ -30,14 +32,9 @@ return array(
         ]
     ],
 
-    'redis'=>[
-        'dsn'=> 'redis://127.0.0.1',
-        'lifetime' => 3600,
-    ],
-
     'cookie' => [
         'cookie_prefix' => '',
-        'cookie_expire' => 3600,
+        'cookie_expire' => 3600*24,
         'cookie_domain' => '',
         'cookie_path' => '/',
         'cookie_secure' => false,

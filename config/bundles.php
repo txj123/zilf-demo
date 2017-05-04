@@ -7,6 +7,4 @@ return array(
     'http'=>[
         'alias' => 'http',  //别名
     ],
-    'sysadmin'=>[],
-    'caiji'=>[],
 );

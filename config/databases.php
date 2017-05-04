@@ -10,7 +10,7 @@ return array(
         'username' => 'root',
         'password' => '123456',
         'charset' => 'utf8',
-
+        'attributes' => [PDO::ATTR_PERSISTENT => true]
         /* 读写分离
          * 'slaveConfig' => [
             'username' => 'root',
