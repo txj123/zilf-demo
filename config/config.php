@@ -1,11 +1,5 @@
 <?php
 
-//加载函数文件
-include_once APP_PATH.'/app/Common/helpers/url_helper.php';
-include_once APP_PATH.'/app/Common/helpers/cookie_helper.php';
-include_once APP_PATH.'/app/Common/helpers/security_helper.php';
-include_once APP_PATH.'/app/Common/helpers/functions.php';
-
 return array(
     'timezone' => 'Asia/Shanghai',   //时区
     'language' => 'zh-CN',    //语言配置
@@ -34,11 +28,18 @@ return array(
 
     'cookie' => [
         'cookie_prefix' => '',
-        'cookie_expire' => 3600*24,
+        'cookie_expire' => 3600 * 24,
         'cookie_domain' => '',
         'cookie_path' => '/',
         'cookie_secure' => false,
         'cookie_httponly' => true,
+    ],
+
+    'assets' => [
+        'default' => '',
+        'css_version' => 'v112233',
+        'js_version' => 'v=112233',
+        'img_version' => 'v112233',
     ],
 
     'cache' => require(__DIR__ . '/cache.php'),

@@ -7,7 +7,7 @@
  */
 
 return [
-    'default' => 'redis',  //如果第一个缓存配置不存在，则会食用第二个配置
+    'default' => 'file',  //如果第一个缓存配置不存在，则会食用第二个配置
     'system' => 'file', //系统缓存
 
     'file' => [
