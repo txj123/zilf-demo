@@ -1,6 +1,6 @@
 <?php
 use \Zilf\System\Zilf;
-use \Zilf\Support\Arr;
+use \Zilf\Helpers\Arr;
 
 /**
  * redis 的连接对象
