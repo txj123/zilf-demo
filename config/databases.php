@@ -1,8 +1,8 @@
 <?php
 
 /**
-* 数据库的配置信息
-*/
+ * 数据库的配置信息
+ */
 
 return array(
     'default'=>array(
