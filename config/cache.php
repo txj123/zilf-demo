@@ -12,7 +12,7 @@ return [
 
     'file' => [
         'driver' => 'file',
-        'path' => APP_PATH.'/runtime', //默认是项目的var目录
+        'path' => APP_PATH.'/runtime/cache', //默认是项目的var目录
     ],
 
     'apc' => [
