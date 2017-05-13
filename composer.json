@@ -14,6 +14,5 @@
 		"predis/predis": "^1.1",
 		"overtrue/pinyin": "~3.0",
 		"jasongrimes/paginator": "~1.0"
-	},
-	"minimum-stability": "dev"
+	}
 }
