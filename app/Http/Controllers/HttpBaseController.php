@@ -6,7 +6,7 @@
  * Time: 上午10:56
  */
 
-namespace Http\Controllers;
+namespace App\Http\Controllers;
 
 
 use Zilf\System\Controller as BaseController;
