@@ -1,7 +1,9 @@
 {
 	"name": "zilf/zilf-demo",
     "description": "Zilf PHP Framework Demo",
+    "keywords": ["framework", "zilf"],
     "license": "MIT",
+    "type": "project",
 	"authors": [
 		{
 			"name":"lilei",
@@ -14,5 +16,10 @@
 		"predis/predis": "^1.1",
 		"overtrue/pinyin": "~3.0",
 		"jasongrimes/paginator": "~1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"App\\": "app/"
+		}
 	}
 }
