@@ -22,6 +22,8 @@ Zilf 使用 [Composer](https://getcomposer.org/) 来管理代码依赖。所以�
 通过 Composer 在命令行运行 create-project 命令来安装 Zilf：
 ```
 composer create-project --prefer-dist zilf/zilf-demo blog
+cd blog
+composer update
 ```
 
 ## 实例网站：
