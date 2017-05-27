@@ -10,6 +10,6 @@
  * @var \Zilf\Routing\Route $route;
  */
 
-$route->any('/test(/:id)', ['App\Controllers\IndexController', 'test']);
+$route->any('/test(/:id)', ['App\Http\Controllers\IndexController', 'index']);
 
 
