@@ -23,7 +23,7 @@ Zilf 使用 [Composer](https://getcomposer.org/) 来管理代码依赖。所以�
 ```
 composer create-project --prefer-dist zilf/zilf-demo blog
 cd blog
-composer update
+chmod -R 777 runtime
 ```
 
 ## 实例网站：
