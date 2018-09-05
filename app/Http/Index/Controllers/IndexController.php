@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Index\Controllers;
 
 
 class IndexController extends HttpBaseController

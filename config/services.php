@@ -1,27 +1,12 @@
 <?php
-use \Zilf\System\Zilf;
-use \Zilf\Helpers\Arr;
-
-/**
- * redis 的连接对象
- */
-Zilf::$container->register('redis',function (){
-    $config = Zilf::$container->get('config')->get('cache.redis');
-
-    return new \Zilf\Redis\RedisManager(Arr::pull($config, 'client', 'predis'), $config);
-});
-
-/**
- * redis的连接服务
- */
-Zilf::$container->register('redis.connection',function (){
-    return Zilf::$container->get('redis')->connection();
-});
-
-Zilf::$container->register('cache.store', function ($app) {
-    return Zilf::$container['cache']->driver();
-});
-
-Zilf::$container->register('memcached.connector', function () {
-    return new \Zilf\Cache\MemcachedConnector();
-});
+return [
+    'Zilf\\Cache\\CacheServiceProvider',
+//    'Zilf\\Encryption\\EncryptionServiceProvider',
+    'Zilf\\Redis\\RedisServiceProvider',
+    'Zilf\\Db\\DbServiceProvider',
+    'Zilf\\Log\\LogServiceProvider',
+    'Zilf\\View\\ViewServiceProvider',
+    'Zilf\\Security\\Hashids\\HashidsServiceProvider',
+    'Zilf\\Security\\Hashing\\HashingServiceProvider',
+    'Zilf\\System\\Providers\\ConsoleSupportServiceProvider',
+];

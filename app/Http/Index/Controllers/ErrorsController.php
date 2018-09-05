@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers;
+namespace App\Http\Index\Controllers;
 
 
 class ErrorsController extends HttpBaseController

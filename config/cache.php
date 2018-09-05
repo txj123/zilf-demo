@@ -12,7 +12,7 @@ return [
 
     'file' => [
         'driver' => 'file',
-        'path' => APP_PATH.'/runtime/cache', //默认是项目的var目录
+        'path' => \Zilf\System\Zilf::$app->runtimePath().'/cache', //默认是项目的var目录
     ],
 
     'apc' => [

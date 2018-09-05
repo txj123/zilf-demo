@@ -3,3 +3,7 @@
 
 .idea/*
 .sass-cache/*
+node_modules/*
+runtime/*
+public/http/html/*
+package-lock.json

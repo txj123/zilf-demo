@@ -5,10 +5,10 @@
  */
 
 return array(
-    'default'=>array(
-        'dsn' => 'mysql:host=localhost;dbname=medicinal_caiji',
-        'username' => 'root',
-        'password' => '123456',
+    'default' => array(
+        'dsn' => env('DB_DSN'),
+        'username' => env('DB_USERNAME'),
+        'password' => env('DB_PASSWORD'),
         'charset' => 'utf8',
         'attributes' => [PDO::ATTR_PERSISTENT => true]
         /* 读写分离
