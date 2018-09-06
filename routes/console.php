@@ -14,6 +14,6 @@ use \Zilf\Console\Inspiring;
 |
 */
 
-/*\Zilf\Facades\Artisan::command('inspire', function () {
+self::command('inspire', function () {
     $this->comment(Inspiring::quote());
-})->describe('Display an inspiring quote');*/
+})->describe('Display an inspiring quote');
