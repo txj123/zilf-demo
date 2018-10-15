@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use Zilf\Console\Kernel as ConsoleKernel;
+use Zilf\Console\Scheduling\Schedule;
 
 class Kernel extends ConsoleKernel
 {
@@ -14,7 +15,17 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         //
     ];
-        
+
+    /**
+     * Define the application's command schedule.
+     *
+     * @param  \Zilf\Console\Scheduling\Schedule  $schedule
+     * @return void
+     */
+    protected function schedule(Schedule $schedule)
+    {
+    }
+
     /**
      * Register the commands for the application.
      *

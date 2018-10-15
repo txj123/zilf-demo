@@ -18,15 +18,6 @@ return array(
         'view_suffix' => '.php',  //视图的后缀
     ],
 
-    'monolog' => [
-        'handlers' => [
-            [
-                'type' => 'StreamHandler',
-                'level' => 'debug',
-            ]
-        ]
-    ],
-
     'cookie' => [
         'cookie_prefix' => '',
         'cookie_expire' => 3600 * 24 * 3,
@@ -47,16 +38,8 @@ return array(
         'referfer' => [
             'scheme' => ['http','https'],
             'host' => [
-                'www.glt365.me',
-                'glt365.me',
-                '192.168.0.168',
-                'www.glt365.com',
-                'glt365.com',
-                '47.92.142.147',
                 'localhost',
             ],
         ]
     ],
-
-    'default_logo' => 'assets/layouts/layout/img/avatar3.jpg',
 );
